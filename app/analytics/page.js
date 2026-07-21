@@ -26,7 +26,7 @@ export default function AnalyticsPage() {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/transactions/category-analytics",
+      `${process.env.NEXT_PUBLIC_API_URL}/api/transactions/category-analytics`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ export default function AnalyticsPage() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/transactions",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/transactions`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -45,7 +45,7 @@ export default function BudgetPage() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:5000/api/budget", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/budget`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -67,7 +67,7 @@ export default function BudgetPage() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:5000/api/transactions", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/transactions`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -94,7 +94,7 @@ export default function BudgetPage() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/budget/set",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/budget/set`,
 
         {
           method: "POST",

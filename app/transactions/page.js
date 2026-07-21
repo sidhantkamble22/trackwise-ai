@@ -43,7 +43,7 @@ const fetchTransactions = async () => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/transactions",
+      `${process.env.NEXT_PUBLIC_API_URL}/api/transactions`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -77,7 +77,7 @@ const handleDelete = async (id) => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      `http://localhost:5000/api/transactions/delete/${id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/transactions/delete/${id}`,
       {
         method: "DELETE",
         headers: {

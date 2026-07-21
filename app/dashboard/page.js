@@ -45,7 +45,7 @@ const fetchCategoryAnalytics = async () => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/transactions/category-analytics",
+      `${process.env.NEXT_PUBLIC_API_URL}/api/transactions/category-analytics`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -70,7 +70,7 @@ const fetchAnalytics = async () => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/transactions/analytics",
+      `${process.env.NEXT_PUBLIC_API_URL}/api/transactions/analytics`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -108,7 +108,7 @@ const fetchAnalytics = async () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/transactions",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/transactions`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -135,7 +135,7 @@ const fetchAnalytics = async () => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/transactions/add",
+      `${process.env.NEXT_PUBLIC_API_URL}/api/transactions/add`,
       {
         method: "POST",
         headers: {
@@ -181,7 +181,7 @@ const handleDeleteTransaction = async (id) => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      `http://localhost:5000/api/transactions/delete/${id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/transactions/delete/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -213,7 +213,7 @@ const handleUpdateTransaction = async (updatedTransaction) => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      `http://localhost:5000/api/transactions/update/${updatedTransaction._id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/transactions/update/${updatedTransaction._id}`,
       {
         method: "PUT",
         headers: {

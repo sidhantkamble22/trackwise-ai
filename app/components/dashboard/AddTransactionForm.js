@@ -44,7 +44,7 @@ export default function AddTransactionForm({
    const token = localStorage.getItem("token");
 
 const response = await fetch(
-  "http://localhost:5000/api/transactions/add",
+  `${process.env.NEXT_PUBLIC_API_URL}/api/transactions/add`,
   {
     method: "POST",
     headers: {

@@ -86,7 +86,7 @@ How can I help you today?`,
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/ai/chat",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/ai/chat`,
         {
           method: "POST",
 

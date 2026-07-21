@@ -26,7 +26,7 @@ export default function AIInsights() {
 
       const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:5000/api/ai/dashboard", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/ai/dashboard`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
