@@ -1,36 +1,275 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 TrackWise AI
 
-## Getting Started
+> AI-Powered Personal Finance & Expense Tracker built using the MERN Stack and Google Gemini AI.
 
-First, run the development server:
+TrackWise AI helps users manage their personal finances by tracking income, expenses, monthly budgets, analytics, and AI-generated financial insights—all in one modern dashboard.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+# 🌟 Features
+
+## 🔐 Authentication
+- User Registration & Login
+- JWT Authentication
+- Protected Routes
+- Secure Password Encryption
+
+## 💰 Expense Management
+- Add Transactions
+- Edit Transactions
+- Delete Transactions
+- Search Transactions
+- Category Filter
+- CSV Export
+
+## 📊 Dashboard
+- Total Balance
+- Total Income
+- Total Expense
+- Savings
+- Recent Transactions
+- AI Insights
+
+## 📈 Analytics
+- Expense by Category
+- Income vs Expense Charts
+- Monthly Summary
+- Saving Rate
+- Top Expense Categories
+
+## 💳 Budget Management
+- Monthly Budget
+- Budget Usage Progress
+- Remaining Budget
+- Budget Status
+
+## 🤖 AI Assistant
+- Google Gemini AI Integration
+- Financial Advice
+- Spending Analysis
+- Budget Suggestions
+- AI Chat Assistant
+
+## 👤 User Profile
+- Profile Information
+- User Statistics
+- Secure Logout
+
+## 🎨 UI
+- Modern Dashboard
+- Responsive Design
+- Mobile Friendly
+- Dark Mode
+- Premium User Interface
+
+---
+
+# 🛠 Tech Stack
+
+### Frontend
+- Next.js
+- React.js
+- JavaScript
+- Tailwind CSS
+- React Icons
+- Recharts
+- React Hot Toast
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcryptjs
+
+### AI
+- Google Gemini API
+
+---
+
+# 📂 Folder Structure
+
+```
+TrackWise-AI
+│
+├── client
+│   ├── app
+│   ├── components
+│   ├── public
+│   └── styles
+│
+├── server
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── config
+│   └── server.js
+│
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# 📸 Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Add screenshots of the following pages.
 
-## Learn More
+- Dashboard
+- Analytics
+- AI Chat
+- Budget
+- Profile
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 🚀 Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Clone Repository
 
-## Deploy on Vercel
+```bash
+git clone https://github.com/sidhantkamble22/trackwise-ai.git
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Install Frontend
+
+```bash
+cd client
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Install Backend
+
+```bash
+cd server
+
+npm install
+
+npm run dev
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file inside the **server** folder.
+
+```env
+PORT=5000
+
+MONGO_URI=YOUR_MONGODB_URI
+
+JWT_SECRET=YOUR_JWT_SECRET
+
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+---
+
+# 📡 API Endpoints
+
+## Authentication
+
+```
+POST /api/auth/register
+
+POST /api/auth/login
+```
+
+## Transactions
+
+```
+GET    /api/transactions
+
+POST   /api/transactions/add
+
+PUT    /api/transactions/update/:id
+
+DELETE /api/transactions/delete/:id
+```
+
+## Budget
+
+```
+GET  /api/budget
+
+POST /api/budget/set
+```
+
+## AI
+
+```
+GET  /api/ai/dashboard
+
+POST /api/ai/chat
+```
+
+## User
+
+```
+GET /api/user/profile
+```
+
+---
+
+# ✅ Features Completed
+
+- Authentication
+- Dashboard
+- Expense Management
+- Budget Management
+- Analytics
+- AI Dashboard Insights
+- AI Chat
+- CSV Export
+- Charts
+- Dark Mode
+- Responsive UI
+- Profile Page
+
+---
+
+# 🚀 Future Improvements
+
+- PDF Report Export
+- Email Reports
+- Recurring Transactions
+- Push Notifications
+- Multi Currency Support
+- OCR Bill Scanner
+- Voice Expense Entry
+- Progressive Web App (PWA)
+
+---
+
+# 👨‍💻 Developer
+
+**Sidhant Kamble**
+
+### GitHub
+
+https://github.com/sidhantkamble22
+
+### LinkedIn
+
+https://www.linkedin.com/in/sidhant-kamble-8b5149307
+
+---
+
+# ⭐ Support
+
+If you like this project, don't forget to **star ⭐ the repository**.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
